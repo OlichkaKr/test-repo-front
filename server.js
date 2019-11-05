@@ -3,7 +3,6 @@ const app = express();
 
 app.use(express.static('static_files'));
 
-// start the server at URL: http://localhost:3000/
-app.listen(8080, () => {
-  console.log('Server started at http://localhost:8080/');
+app.listen(8000, () => {
+  console.log('Server started at http://localhost:8000/');
 });
