@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matches</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/background.css') }}">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+</head>
+
+<body class="background">
+<div id="header-content" class="col-md-11">
+    <div id="head-background">
+        <div id="head-menu">
+            <div class="topnav" id="topnav">
+                <label style="width: 25%; margin-left: 1%; margin-top: 1% ">
+                    <input id="cords" type="text" name="cords" alt="Submit" placeholder="Coordinates" class="input-name">
+                </label>
+                <label style="width: 25%; margin: 1%;">
+                    <input id="filling" type="text" name="filling" alt="Submit" placeholder="Filling out" class="input-name">
+                </label>
+                <label style="width: 25%; margin: 1% 1% 1% 0;">
+                    <input id="export" type="text" name="export" alt="Submit" placeholder="Export date" class="input-name">
+                </label>
+                <input type="button" onclick="addData()" name="Submit"
+                       value="Add data" class="submit-feedback">
+            </div>
+        </div>
+    </div>
+</div>
+<section>
+    <h1 class="table-title"></h1>
+</section>
+
+<content id="content-table">
+    <table class="table-style" id="in-table">
+        <title>Poker Tournaments</title>
+        <tr>
+            <th class="th-style">№</th>
+            <th class="th-style">Coordinates</th>
+            <th class="th-style">Filling out</th>
+            <th class="th-style">Export date</th>
+        </tr>
+    </table>
+</content>
+<footer>
+    <p>Created by: Olga Kryvoruchka</p>
+    <p>Contact information: <a href="mailto:olichka121kr76@gmail.com">olichka121kr76@gmail.com</a>.</p>
+</footer>
+</body>
+<script>get_all_data()</script>
+</html>
