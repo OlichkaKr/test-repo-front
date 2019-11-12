@@ -1,5 +1,5 @@
 function get_all_data() {
-    $.get("https://akerbrinfo.azurewebsites.net/api/service/get/all", render_page);
+    $.get("https://akerbrback.azurewebsites.net/api/service/get/all", render_page);
 }
 
 function render_page(result) {
@@ -24,7 +24,7 @@ function addData() {
         export: document.getElementById("export").value});
     $.ajax({
         type: 'POST',
-        url: "https://akerbrinfo.azurewebsites.net/api/service/post",
+        url: "https://akerbrback.azurewebsites.net/api/service/post",
         data: {'data': d}
     });
     document.getElementById("cords").value = "";
